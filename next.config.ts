@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
   // Optimize images
   images: {
     domains: ['localhost'],
+    unoptimized: false,
   },
   // Experimental features
   experimental: {
