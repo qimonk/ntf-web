@@ -13,11 +13,18 @@ const nextConfig: NextConfig = {
   // Optimize images
   images: {
     domains: ['localhost'],
+    unoptimized: false,
   },
   // Experimental features
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
+  // Output configuration for static export
+  output: 'standalone',
+  // Compression
+  compress: true,
+  // Performance
+  poweredByHeader: false,
 };
 
 export default nextConfig;
