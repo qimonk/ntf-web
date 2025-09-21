@@ -14,21 +14,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "NSY Tax Freelancer - Solusi Perpajakan Profesional",
+  description: "Layanan konsultasi, perhitungan, dan pelaporan pajak profesional untuk bisnis Anda. Hubungi kami untuk solusi perpajakan terbaik.",
+  keywords: ["pajak", "konsultasi pajak", "perhitungan pajak", "pelaporan pajak", "tax planning", "NSY Tax Freelancer"],
+  authors: [{ name: "NSY Tax Freelancer" }],
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "NSY Tax Freelancer - Solusi Perpajakan Profesional",
+    description: "Layanan konsultasi, perhitungan, dan pelaporan pajak profesional untuk bisnis Anda",
+    url: "https://nsy-tax-freelancer.pages.dev",
+    siteName: "NSY Tax Freelancer",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "NSY Tax Freelancer - Solusi Perpajakan Profesional",
+    description: "Layanan konsultasi, perhitungan, dan pelaporan pajak profesional untuk bisnis Anda",
+  },
+  icons: {
+    icon: '/favicon.ico',
   },
 };
 

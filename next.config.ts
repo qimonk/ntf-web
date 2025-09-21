@@ -23,6 +23,13 @@ const nextConfig: NextConfig = {
   compress: true,
   // Performance
   poweredByHeader: false,
+  // Static export for Cloudflare Pages
+  output: 'export',
+  trailingSlash: true,
+  // Skip API routes for static export
+  generateBuildId: async () => {
+    return 'nsy-tax-freelancer-build'
+  },
 };
 
 export default nextConfig;
