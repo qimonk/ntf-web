@@ -10,7 +10,7 @@ interface ServiceActionsProps {
 
 export function ServiceActions({ serviceName }: ServiceActionsProps) {
   const handleWhatsAppClick = (message: string) => {
-    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/62895340042060?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
 
@@ -36,7 +36,7 @@ interface PricingCardProps {
 
 export function PricingCard({ planName, serviceName, highlighted = false }: PricingCardProps) {
   const handleWhatsAppClick = (message: string) => {
-    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/62895340042060?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
 
@@ -56,7 +56,7 @@ interface CTASectionProps {
 
 export function CTASection({ serviceName }: CTASectionProps) {
   const handleWhatsAppClick = (message: string) => {
-    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/62895340042060?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
 

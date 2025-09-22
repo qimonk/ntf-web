@@ -159,7 +159,7 @@ function PricingCard({ plan, index, isYearly }: { plan: PricingPlan; index: numb
             onClick={() => {
               // Open WhatsApp
               const message = `Halo, saya tertarik dengan paket ${plan.name}`
-              const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
+              const whatsappUrl = `https://wa.me/62895340042060?text=${encodeURIComponent(message)}`
               window.open(whatsappUrl, '_blank')
             }}
           >
@@ -245,7 +245,7 @@ export function PricingSection({ className }: PricingSectionProps) {
               variant="outline"
               onClick={() => {
                 const message = 'Halo, saya tertarik dengan paket kustom'
-                const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
+                const whatsappUrl = `https://wa.me/62895340042060?text=${encodeURIComponent(message)}`
                 window.open(whatsappUrl, '_blank')
               }}
             >

@@ -71,7 +71,7 @@ export function ContactSection({ className }: ContactSectionProps) {
       title: 'Telepon',
       details: [
         '+62 21 1234 5678',
-        '+62 812 3456 7890'
+        '+62 895-3400-42060'
       ]
     },
     {
@@ -181,7 +181,7 @@ export function ContactSection({ className }: ContactSectionProps) {
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+62 812 3456 7890"
+                        placeholder="+62 895-3400-42060"
                       />
                     </div>
                     <div>
