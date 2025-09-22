@@ -23,7 +23,6 @@ const nextConfig: NextConfig = {
   compress: true,
   // Performance
   poweredByHeader: false,
-<<<<<<< HEAD
   // Static export for Cloudflare Pages
   output: 'export',
   trailingSlash: true,
@@ -31,8 +30,6 @@ const nextConfig: NextConfig = {
   generateBuildId: async () => {
     return 'nsy-tax-freelancer-build'
   },
-=======
->>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
 };
 
 export default nextConfig;
