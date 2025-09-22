@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, CheckCircle, Users, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Users, TrendingUp, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
@@ -152,19 +152,24 @@ export function HeroSection({ className }: HeroSectionProps) {
             <Button
               size="lg"
               className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/25"
-              onClick={() => document.querySelector('#layanan')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                const message = 'Halo, saya tertarik dengan layanan NSY Tax Freelancer'
+                const whatsappUrl = `https://wa.me/62895340042060?text=${encodeURIComponent(message)}`
+                window.open(whatsappUrl, '_blank')
+              }}
             >
-              Lihat Layanan Kami
-              <ArrowRight className="ml-2 w-5 h-5" />
+              Konsultasi via WhatsApp
+              <MessageCircle className="ml-2 w-5 h-5" />
             </Button>
             
             <Button
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-900 font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300"
-              onClick={() => document.querySelector('#kontak')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.querySelector('#layanan')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Konsultasi Gratis
+              Lihat Layanan Kami
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
 
