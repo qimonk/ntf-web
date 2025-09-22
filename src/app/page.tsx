@@ -36,6 +36,10 @@ import {
   Users, 
   Award, 
   Star, 
+<<<<<<< HEAD
+=======
+  Play, 
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
   ArrowRight,
   CheckCircle,
   Briefcase,
@@ -62,6 +66,67 @@ import {
   Lock,
   Gift,
   Calendar,
+<<<<<<< HEAD
+=======
+  MapPin,
+  Camera,
+  Mic,
+  Video,
+  Headphones,
+  Wifi,
+  Battery,
+  Bluetooth,
+  Usb,
+  Monitor,
+  Keyboard,
+  Mouse,
+  Printer,
+  HardDrive,
+  Cpu,
+  Battery,
+  Wifi,
+  Bluetooth,
+  Usb,
+  Camera,
+  Mic,
+  Video,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  Pause,
+  Play,
+  SkipBack,
+  SkipForward,
+  Shuffle,
+  Repeat,
+  Music,
+  Radio,
+  Tv,
+  Tablet,
+  Laptop,
+  Headphones,
+  Speaker,
+  Image,
+  Film,
+  Video,
+  AudioLines,
+  Satellite,
+  WifiOff,
+  Signal,
+  Volume2,
+  VolumeX,
+  MicOff,
+  VideoOff,
+  CameraOff,
+  Download,
+  Upload,
+  Settings,
+  User,
+  Lock,
+  Gift,
+  Calendar,
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
   MapPin
 } from 'lucide-react'
 
@@ -200,6 +265,21 @@ export default function Home() {
       role: "Director XYZ Corp",
       content: "Solusi pajak terbaik untuk perusahaan kami",
       rating: 4
+<<<<<<< HEAD
+=======
+    },
+    {
+      name: "Dewi Lestari",
+      role: "Entrepreneur",
+      content: "Pelayanan ramah dan hasilnya memuaskan",
+      rating: 5
+    },
+    {
+      name: "Rudi Pratama",
+      role: "Business Owner",
+      content: "Rekomendasi untuk semua kebutuhan pajak",
+      rating: 5
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
     }
   ]
 
@@ -260,6 +340,37 @@ export default function Home() {
     {
       question: "Berapa biaya layanan?",
       answer: "Biaya tergantung pada jenis layanan dan kompleksitas kebutuhan. Kami memiliki paket Basic, Pro, dan Enterprise."
+<<<<<<< HEAD
+=======
+    },
+    {
+      question: "Apakah tersedia layanan online?",
+      answer: "Ya, kami menyediakan layanan konsultasi online 24/7 melalui platform digital kami."
+    },
+    {
+      question: "Bagaimana dengan keamanan data?",
+      answer: "Kami menjaga kerahasiaan data klien dengan sistem keamanan terenkripsi dan standar keamanan tinggi."
+    },
+    {
+      question: "Apakah bisa untuk perusahaan multinasional?",
+      answer: "Ya, kami berpengalaman menangani klien dari berbagai skala, termasuk perusahaan multinasional."
+    },
+    {
+      question: "Bagaimana cara pembayaran?",
+      answer: "Kami menerima pembayaran via transfer bank, virtual account, dan pembayaran digital lainnya."
+    },
+    {
+      question: "Apakah ada garansi?",
+      answer: "Kami memberikan garansi kepuasan dengan revisi gratis jika ada kesalahan perhitungan."
+    },
+    {
+      question: "Berapa lama prosesnya?",
+      answer: "Proses tergantung kompleksitas, umumnya 1-7 hari kerja untuk layanan standar."
+    },
+    {
+      question: "Apakah tersedia training?",
+      answer: "Ya, kami menyediakan training pajak untuk tim internal perusahaan Anda."
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
     }
   ]
 
@@ -429,6 +540,7 @@ export default function Home() {
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500"></div>
         
+<<<<<<< HEAD
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
@@ -457,6 +569,81 @@ export default function Home() {
                 Hubungi Kami
               </Button>
             </div>
+=======
+        {/* Particle Background */}
+        <div className="absolute inset-0">
+          {[...Array(50)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-yellow-400 rounded-full opacity-30"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -20, 0],
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 2 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Wave SVG */}
+        <div className="absolute bottom-0 left-0 w-full">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+          </svg>
+        </div>
+
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+          >
+            Solusi Pajak
+            <span className="text-yellow-400"> Profesional</span>
+          </motion.h1>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto"
+          >
+            Layanan konsultasi dan perpajakan terpercaya untuk UMKM hingga korporasi
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Button
+              size="lg"
+              className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold px-8 py-3 text-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Lihat Portofolio
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-blue-900 font-semibold px-8 py-3 text-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Hubungi Kami
+            </Button>
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
           </motion.div>
 
           {/* Stats */}
@@ -469,8 +656,13 @@ export default function Home() {
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-400">
                 <motion.span
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+=======
+                  initial={{ count: 0 }}
+                  animate={{ count: clientCount }}
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
                   transition={{ duration: 2 }}
                 >
                   {clientCount}+
@@ -481,8 +673,13 @@ export default function Home() {
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-400">
                 <motion.span
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+=======
+                  initial={{ count: 0 }}
+                  animate={{ count: reportCount }}
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
                   transition={{ duration: 2, delay: 0.5 }}
                 >
                   {reportCount}+
@@ -493,8 +690,13 @@ export default function Home() {
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-400">
                 <motion.span
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+=======
+                  initial={{ count: 0 }}
+                  animate={{ count: experienceCount }}
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
                   transition={{ duration: 2, delay: 1 }}
                 >
                   {experienceCount}+
@@ -507,6 +709,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
+<<<<<<< HEAD
       <section ref={servicesRef} className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
@@ -518,6 +721,20 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">Layanan Kami</h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Solusi perpajakan komprehensif untuk kebutuhan bisnis Anda
+=======
+      <section ref={servicesRef} className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Layanan Kami</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Solusi pajak komprehensif untuk kebutuhan bisnis Anda
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
             </p>
           </motion.div>
 
@@ -525,6 +742,7 @@ export default function Home() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -539,12 +757,41 @@ export default function Home() {
                 <p className="text-gray-600 dark:text-gray-400">
                   {service.description}
                 </p>
+=======
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05, y: -10 }}
+                className="cursor-pointer"
+              >
+                <Card className="h-full text-center group hover:shadow-xl transition-all duration-300">
+                  <CardHeader>
+                    <motion.div
+                      className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-600 to-yellow-500 rounded-full flex items-center justify-center text-white mb-4"
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      {service.icon}
+                    </motion.div>
+                    <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-gray-600 dark:text-gray-300">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-yellow-500">
         <div className="container mx-auto px-4 text-center">
@@ -573,13 +820,387 @@ export default function Home() {
               >
                 Lihat Layanan
               </Button>
+=======
+      {/* Portfolio Section */}
+      <section ref={portfolioRef} className="py-20 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Portofolio</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Hasil kerja kami untuk berbagai klien
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {portfolioItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05, rotateY: 5 }}
+                className="cursor-pointer"
+              >
+                <Card className="h-full group hover:shadow-xl transition-all duration-300">
+                  <CardHeader>
+                    <div className="w-full h-48 bg-gradient-to-br from-blue-600 to-yellow-500 rounded-lg mb-4"></div>
+                    <div className="flex items-center justify-between">
+                      <Badge variant="secondary">{item.category}</Badge>
+                      <ArrowRight className="w-5 h-5 text-blue-600 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                    <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">
+                      {item.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-gray-600 dark:text-gray-300">
+                      {item.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section ref={aboutRef} className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Tentang NSY Tax Freelancer</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                NSY Tax Freelancer adalah tim profesional yang berdedikasi untuk memberikan solusi pajak terbaik 
+                bagi UMKM hingga perusahaan korporasi. Dengan pengalaman lebih dari 8 tahun, kami telah 
+                membantu ratusan klien dalam mengoptimalkan kewajiban perpajakan mereka.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-500" />
+                  <span className="text-gray-700 dark:text-gray-300">Tim profesional berpengalaman</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-500" />
+                  <span className="text-gray-700 dark:text-gray-300">Layanan 24/7 untuk semua klien</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-500" />
+                  <span className="text-gray-700 dark:text-gray-300">Teknologi terkini dan update regulasi</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-6">
+              {[1, 2, 3, 4].map((item) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: item * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-white dark:bg-gray-700 p-6 rounded-lg text-center"
+                >
+                  <Avatar className="w-20 h-20 mx-auto mb-4">
+                    <AvatarFallback>TM{item}</AvatarFallback>
+                  </Avatar>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Tim Member {item}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Tax Consultant</p>
+                </motion.div>
+              ))}
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
             </div>
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
+=======
+      {/* CTA Section */}
+      <section ref={ctaRef} className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Siap Mengoptimalkan Pajak Anda?</h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Hubungi kami sekarang untuk konsultasi gratis dan dapatkan solusi pajak terbaik untuk bisnis Anda
+            </p>
+            
+            <motion.div
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <Button
+                size="lg"
+                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold px-12 py-4 text-xl border-2 border-yellow-400"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Hubungi Kami Sekarang
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Blog & Artikel</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Informasi terbaru seputar perpajakan dan tips bisnis
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {blogPosts.map((post, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                className="cursor-pointer"
+              >
+                <Card className="h-full group hover:shadow-xl transition-all duration-300">
+                  <div className="w-full h-48 bg-gradient-to-br from-blue-600 to-yellow-500 rounded-t-lg"></div>
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <Badge variant="secondary">{post.category}</Badge>
+                      <span className="text-sm text-gray-500">{post.date}</span>
+                    </div>
+                    <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                      {post.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-gray-600 dark:text-gray-300">
+                      {post.excerpt}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Jawaban untuk pertanyaan yang sering diajukan
+            </p>
+          </motion.div>
+
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
+              Masih punya pertanyaan?
+            </p>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+              Hubungi Kami
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Testimoni Klien</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Apa yang katakan klien kami tentang layanan kami
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Card className="h-full hover:shadow-xl transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center space-x-2 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <CardDescription className="text-gray-600 dark:text-gray-300 italic">
+                      "{testimonial.content}"
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex items-center space-x-3">
+                      <Avatar>
+                        <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <p className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">{testimonial.role}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Harga Layanan</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Pilih paket yang sesuai dengan kebutuhan bisnis Anda
+            </p>
+            
+            <div className="flex items-center justify-center space-x-4 mt-8">
+              <span className={`text-lg ${activePricing === 'monthly' ? 'text-blue-600 font-semibold' : 'text-gray-600'}`}>
+                Bulanan
+              </span>
+              <Switch
+                checked={activePricing === 'yearly'}
+                onCheckedChange={(checked) => setActivePricing(checked ? 'yearly' : 'monthly')}
+              />
+              <span className={`text-lg ${activePricing === 'yearly' ? 'text-blue-600 font-semibold' : 'text-gray-600'}`}>
+                Tahunan ( hemat 20% )
+              </span>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                className={`relative ${plan.highlighted ? 'transform scale-105' : ''}`}
+              >
+                {plan.highlighted && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <Badge className="bg-yellow-500 text-blue-900 px-4 py-2">Rekomendasi</Badge>
+                  </div>
+                )}
+                <Card className={`h-full ${plan.highlighted ? 'border-2 border-yellow-400 shadow-xl' : ''}`}>
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">
+                      {plan.name}
+                    </CardTitle>
+                    <div className="mt-4">
+                      <span className="text-4xl font-bold text-gray-900 dark:text-white">
+                        Rp {plan.price.toLocaleString('id-ID')}
+                      </span>
+                      <span className="text-gray-600 dark:text-gray-300">/{activePricing === 'monthly' ? 'bulan' : 'tahun'}</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center space-x-2">
+                          <CheckCircle className="w-5 h-5 text-green-500" />
+                          <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button
+                      className={`w-full ${plan.highlighted ? 'bg-yellow-500 hover:bg-yellow-600 text-blue-900' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Pilih Paket
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer ref={footerRef} className="bg-gray-900 text-white py-12">
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -589,6 +1210,7 @@ export default function Home() {
                 </div>
                 <span className="text-xl font-bold">Tax Freelancer</span>
               </div>
+<<<<<<< HEAD
               <p className="text-gray-400">
                 Solusi perpajakan profesional untuk bisnis Anda.
               </p>
@@ -636,16 +1258,181 @@ export default function Home() {
                 </a>
                 <a href="#" className="text-gray-400 hover:text-white">
                   <Linkedin className="w-6 h-6" />
+=======
+              <p className="text-gray-400 mb-4">
+                Solusi pajak profesional untuk bisnis Anda
+              </p>
+              <div className="flex space-x-4">
+                <motion.a
+                  href="https://www.instagram.com/nsy_tax?igsh=MTZzdzg5ZzZvaXV0MQ=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="text-gray-400 hover:text-white"
+                >
+                  <Instagram className="w-6 h-6" />
+                </motion.a>
+                <motion.a
+                  href="#"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="text-gray-400 hover:text-white"
+                >
+                  <Facebook className="w-6 h-6" />
+                </motion.a>
+                <motion.a
+                  href="#"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="text-gray-400 hover:text-white"
+                >
+                  <Twitter className="w-6 h-6" />
+                </motion.a>
+                <motion.a
+                  href="#"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="text-gray-400 hover:text-white"
+                >
+                  <Linkedin className="w-6 h-6" />
+                </motion.a>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Layanan</h3>
+              <ul className="space-y-2">
+                {['Konsultasi Pajak', 'Perhitungan Pajak', 'Pelaporan Pajak', 'Perencanaan Pajak'].map((item, index) => (
+                  <li key={index}>
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors">{item}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Perusahaan</h3>
+              <ul className="space-y-2">
+                {['Tentang Kami', 'Portofolio', 'Blog', 'Karir'].map((item, index) => (
+                  <li key={index}>
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors">{item}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Kontak</h3>
+              <div className="space-y-3">
+                <a
+                  href="https://wa.me/62895340042060"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  <span>+62 895-3400-42060</span>
+                </a>
+                <a
+                  href="mailto:nisyaaapratiwi@gmail.com"
+                  className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>nisyaaapratiwi@gmail.com</span>
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
                 </a>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 NSY Tax Freelancer. All rights reserved.</p>
           </div>
         </div>
       </footer>
+=======
+
+          <Separator className="my-8 bg-gray-700" />
+
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400">
+              © {new Date().getFullYear()} NSY Tax Freelancer. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="#" className="text-gray-400 hover:text-white">Privacy Policy</a>
+              <a href="#" className="text-gray-400 hover:text-white">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* Floating WhatsApp Button */}
+      <motion.a
+        href="https://wa.me/62895340042060"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg z-50"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1 }}
+      >
+        <MessageCircle className="w-8 h-8 text-white" />
+      </motion.a>
+
+      {/* Scroll to Top Button */}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            onClick={scrollToTop}
+            className="fixed bottom-6 left-6 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-lg z-50"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <ChevronUp className="w-6 h-6 text-white" />
+          </motion.button>
+        )}
+      </AnimatePresence>
+
+      {/* Confetti Easter Egg */}
+      <AnimatePresence>
+        {showConfetti && (
+          <div className="fixed inset-0 pointer-events-none z-50">
+            {[...Array(100)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  backgroundColor: ['#fbbf24', '#3b82f6', '#10b981', '#f59e0b', '#ef4444'][Math.floor(Math.random() * 5)]
+                }}
+                initial={{ 
+                  y: -50, 
+                  x: Math.random() * 200 - 100,
+                  rotate: 0 
+                }}
+                animate={{ 
+                  y: window.innerHeight + 50, 
+                  x: Math.random() * 400 - 200,
+                  rotate: 360 
+                }}
+                transition={{ 
+                  duration: 3 + Math.random() * 2,
+                  ease: 'easeOut'
+                }}
+              />
+            ))}
+          </div>
+        )}
+      </AnimatePresence>
+>>>>>>> 16b47be18b2a98af725b09c567024d24c8bb0236
     </div>
   )
 }
