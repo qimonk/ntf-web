@@ -1,28 +1,22 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { motion } from 'framer-motion'
 import { 
   ArrowLeft, 
-  CheckCircle, 
-  Clock, 
   Users, 
-  Star, 
   TrendingUp,
   Calculator,
   FileText,
-  Shield,
   Award,
-  MessageCircle
+  Star
 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Breadcrumbs } from '@/components/layout/breadcrumbs'
-import { WhatsAppWidget } from '@/components/whatsapp-widget'
+
 import { cn } from '@/lib/utils'
 import { servicesData, ServiceDetail } from './services-data'
+import { ServiceActions, PricingCard, CTASection } from './service-actions'
 
 // Icon mapping
 const iconComponents = {
@@ -69,12 +63,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
-          >
+          <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
               <div className={cn(
                 'w-20 h-20 rounded-2xl flex items-center justify-center text-white',
@@ -93,63 +82,38 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                onClick={() => {
-                  const message = `Halo, saya tertarik dengan layanan ${service.title}`
-                  const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
-                  window.open(whatsappUrl, '_blank')
-                }}
-              >
-                Konsultasi Sekarang
-                <MessageCircle className="ml-2 w-5 h-5" />
-              </Button>
+              <ServiceActions serviceName={service.title} />
               
               <Link href="/#layanan">
-                <Button variant="outline" size="lg">
+                <button className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
                   <ArrowLeft className="mr-2 w-5 h-5" />
                   Kembali ke Layanan
-                </Button>
+                </button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Content Sections */}
       <div className="container mx-auto px-4 py-16 space-y-16">
         {/* Full Description */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
+        <section>
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Tentang Layanan</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               {service.fullDescription}
             </p>
           </div>
-        </motion.section>
+        </section>
 
         {/* Features */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          viewport={{ once: true }}
-        >
+        <section>
           <h2 className="text-3xl font-bold mb-8 text-center">Fitur Utama</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="bg-card border rounded-lg p-6 hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-start space-x-3">
@@ -158,71 +122,47 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                     <h3 className="font-semibold">{feature}</h3>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         {/* Benefits */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="bg-muted/50 rounded-2xl p-8"
-        >
+        <section className="bg-muted/50 rounded-2xl p-8">
           <h2 className="text-3xl font-bold mb-8 text-center">Keuntungan Menggunakan Layanan Kami</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {service.benefits.map((benefit, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="flex items-center space-x-3"
               >
                 <Award className="w-6 h-6 text-yellow-500 flex-shrink-0" />
                 <span className="text-lg">{benefit}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         {/* Process */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
+        <section>
           <h2 className="text-3xl font-bold mb-8 text-center">Proses Kerja</h2>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {service.process.map((step, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-primary">{index + 1}</span>
                 </div>
                 <p className="text-sm font-medium">{step}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         {/* Pricing */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
+        <section>
           <h2 className="text-3xl font-bold mb-8 text-center">Harga Layanan</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
@@ -253,34 +193,19 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                   </div>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <Button 
-                    className={cn(
-                      'w-full',
-                      plan.highlighted 
-                        ? 'bg-primary hover:bg-primary/90' 
-                        : 'bg-secondary hover:bg-secondary/80'
-                    )}
-                    onClick={() => {
-                      const message = `Halo, saya tertarik dengan paket ${plan.name} untuk layanan ${service.title}`
-                      const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
-                      window.open(whatsappUrl, '_blank')
-                    }}
-                  >
-                    Pilih {plan.name}
-                  </Button>
+                  <PricingCard 
+                    planName={plan.name} 
+                    serviceName={service.title}
+                    highlighted={plan.highlighted}
+                  />
                 </CardContent>
               </Card>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         {/* FAQ */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
+        <section>
           <h2 className="text-3xl font-bold mb-8 text-center">Pertanyaan Umum</h2>
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
@@ -296,16 +221,10 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               ))}
             </Accordion>
           </div>
-        </motion.section>
+        </section>
 
         {/* Testimonials */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-2xl p-8"
-        >
+        <section className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-2xl p-8">
           <h2 className="text-3xl font-bold mb-8 text-center">Apa Kata Mereka</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {service.testimonials.map((testimonial, index) => (
@@ -333,46 +252,26 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               </Card>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         {/* CTA Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
+        <section className="text-center">
           <div className="bg-gradient-to-r from-primary to-purple-600 text-white rounded-2xl p-12">
             <h2 className="text-3xl font-bold mb-4">Siap Memulai?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
               Hubungi kami sekarang untuk konsultasi gratis dan dapatkan solusi perpajakan terbaik untuk bisnis Anda.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                variant="secondary"
-                className="bg-white text-primary hover:bg-white/90"
-                onClick={() => {
-                  const message = `Halo, saya tertarik dengan layanan ${service.title}`
-                  const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
-                  window.open(whatsappUrl, '_blank')
-                }}
-              >
-                Hubungi Kami
-                <MessageCircle className="ml-2 w-5 h-5" />
-              </Button>
+              <CTASection serviceName={service.title} />
               <Link href="/#layanan">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <button className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-white text-white hover:bg-white hover:text-primary h-10 px-4 py-2">
                   Lihat Layanan Lain
-                </Button>
+                </button>
               </Link>
             </div>
           </div>
-        </motion.section>
+        </section>
       </div>
-
-      <WhatsAppWidget />
     </div>
   )
 }

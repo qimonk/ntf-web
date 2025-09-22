@@ -80,7 +80,7 @@ export function WhatsAppWidget({ className }: WhatsAppWidgetProps) {
 
   const handleOpenWhatsApp = () => {
     const message = 'Halo, saya tertarik dengan layanan NSY Tax Freelancer'
-    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/62895340042060?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
 

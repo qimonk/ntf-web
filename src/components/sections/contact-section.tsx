@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Instagram } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -71,7 +71,7 @@ export function ContactSection({ className }: ContactSectionProps) {
       title: 'Telepon',
       details: [
         '+62 21 1234 5678',
-        '+62 812 3456 7890'
+        '+62 895-3400-42060'
       ]
     },
     {
@@ -89,6 +89,20 @@ export function ContactSection({ className }: ContactSectionProps) {
         'Senin - Jumat: 09:00 - 18:00',
         'Sabtu: 09:00 - 15:00',
         'Minggu & Hari Libur: Tutup'
+      ]
+    },
+    {
+      icon: MessageCircle,
+      title: 'WhatsApp',
+      details: [
+        '+62 895-3400-42060'
+      ]
+    },
+    {
+      icon: Instagram,
+      title: 'Instagram',
+      details: [
+        '@nsy_tax'
       ]
     }
   ]
@@ -167,7 +181,7 @@ export function ContactSection({ className }: ContactSectionProps) {
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+62 812 3456 7890"
+                        placeholder="+62 895-3400-42060"
                       />
                     </div>
                     <div>
@@ -219,20 +233,49 @@ export function ContactSection({ className }: ContactSectionProps) {
             {/* Contact Info Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {contactInfo.map((info, index) => (
-                <Card key={info.title} className="border-l-4 border-l-primary">
+                <Card key={info.title} className="border-l-4 border-l-primary contact-card">
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">
                       <div className="p-2 bg-primary/10 rounded-lg">
-                        <info.icon className="w-5 h-5 text-primary" />
+                        <info.icon className="w-5 h-5 text-primary social-icon" />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">{info.title}</h4>
                         <div className="space-y-1">
-                          {info.details.map((detail, idx) => (
-                            <p key={idx} className="text-sm text-muted-foreground">
-                              {detail}
-                            </p>
-                          ))}
+                          {info.details.map((detail, idx) => {
+                            // Make WhatsApp and Instagram clickable
+                            if (info.title === 'WhatsApp') {
+                              return (
+                                <a 
+                                  key={idx}
+                                  href={`https://wa.me/62895340042060`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-sm text-muted-foreground hover:text-primary transition-colors inline-block contact-link"
+                                >
+                                  {detail}
+                                </a>
+                              );
+                            } else if (info.title === 'Instagram') {
+                              return (
+                                <a 
+                                  key={idx}
+                                  href="https://www.instagram.com/nsy_tax"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-sm text-muted-foreground hover:text-primary transition-colors inline-block contact-link"
+                                >
+                                  {detail}
+                                </a>
+                              );
+                            } else {
+                              return (
+                                <p key={idx} className="text-sm text-muted-foreground">
+                                  {detail}
+                                </p>
+                              );
+                            }
+                          })}
                         </div>
                       </div>
                     </div>
@@ -272,7 +315,7 @@ export function ContactSection({ className }: ContactSectionProps) {
                   className="w-full justify-start"
                   onClick={() => {
                     const message = 'Halo, saya butuh konsultasi pajak segera'
-                    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
+                    const whatsappUrl = `https://wa.me/62895340042060?text=${encodeURIComponent(message)}`
                     window.open(whatsappUrl, '_blank')
                   }}
                 >
@@ -283,6 +326,17 @@ export function ContactSection({ className }: ContactSectionProps) {
                 <Button variant="outline" className="w-full justify-start">
                   <Mail className="w-4 h-4 mr-2" />
                   Email Kami
+                </Button>
+                
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start"
+                  onClick={() => {
+                    window.open('https://www.instagram.com/nsy_tax', '_blank')
+                  }}
+                >
+                  <Instagram className="w-4 h-4 mr-2" />
+                  Follow Instagram
                 </Button>
               </CardContent>
             </Card>
