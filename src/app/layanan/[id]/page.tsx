@@ -13,7 +13,7 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Breadcrumbs } from '@/components/layout/breadcrumbs'
-import { WhatsAppWidget } from '@/components/whatsapp-widget'
+
 import { cn } from '@/lib/utils'
 import { servicesData, ServiceDetail } from './services-data'
 import { ServiceActions, PricingCard, CTASection } from './service-actions'
@@ -272,8 +272,6 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
           </div>
         </section>
       </div>
-
-      <WhatsAppWidget />
     </div>
   )
 }
