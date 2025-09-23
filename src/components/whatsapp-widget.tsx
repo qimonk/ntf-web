@@ -82,6 +82,7 @@ export function WhatsAppWidget({ className }: WhatsAppWidgetProps) {
     const message = 'Halo, saya tertarik dengan layanan NSY Tax Freelancer'
     // Format utama menggunakan wa.me (lebih sederhana)
     const whatsappUrl = `https://wa.me/62895340042060?text=${encodeURIComponent(message)}`
+    console.log('Opening WhatsApp URL:', whatsappUrl) // Debug log
     // Format alternatif menggunakan api.whatsapp.com (untuk kompatibilitas)
     // const whatsappUrl = `https://api.whatsapp.com/send?phone=62895340042060&text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
