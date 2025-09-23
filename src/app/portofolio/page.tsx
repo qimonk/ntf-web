@@ -3,6 +3,8 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { PortfolioSection } from '@/components/sections/portfolio-section'
+import { ClientCarousel } from '@/components/sections/client-carousel'
+import { TeamSection } from '@/components/sections/team-section'
 import { Breadcrumbs } from '@/components/layout/breadcrumbs'
 
 export default function PortfolioPage() {
@@ -34,6 +36,12 @@ export default function PortfolioPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Client Carousel Section */}
+      <ClientCarousel />
+
+      {/* Team Section */}
+      <TeamSection />
 
       {/* Portfolio Section */}
       <PortfolioSection />
