@@ -13,11 +13,8 @@ const nextConfig: NextConfig = {
   // Optimize images
   images: {
     domains: ['localhost'],
-    unoptimized: true, // Required for static export
+    unoptimized: false,
   },
-  // Static export configuration
-  output: 'export',
-  trailingSlash: true,
   // Experimental features
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],

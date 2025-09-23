@@ -143,7 +143,7 @@ function TeamCard({ member, index }: { member: TeamMember; index: number }) {
             transition={{ duration: 0.2 }}
           >
             {member.bio}
-          </p>
+          </motion.p>
           
           {/* Expertise */}
           <div className="space-y-2">
